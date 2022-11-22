@@ -3,24 +3,24 @@
 
 class Phonebook:
     def __init__(self):
-        self.entries = [{}]
+        self.entries = []
     # an empty list does not have to be echoed in the "__init__(self, ****)"
     def entryAdd(self,userEntry):
         self.entries.append(self)
     # a function to add entry to Phonebook
     def printAll(self):
         for name in self.entries:
-            print(f"{userEntry}")
+            print(f"{self.entries[name]}")
     # a funtion to print all names and numbers in list
     def entryDel(self):
         for entry in self.entries:
-            print(f"{userEntry}")
+            print(self.entries)
             delItem = input("Type the name you wish to delete: ")
             self.entries.remove(delItem)
     # a function to delete a single entry
     # 1 print list of all entries
     # 2 prompt input from user for name to remove
-    # 3 remove input value
+    # 3 remove input value from entries
 
 
 petersBook = Phonebook()
@@ -28,7 +28,7 @@ petersBook = Phonebook()
 userChoice = ""
 # assigns a variable to call for user input
 while(True):
-# as long as the user inputs "y"
+# as long as the user inputs something other than y
     if (userChoice == "y"):
         break
     # ends the loop
@@ -42,7 +42,8 @@ while(True):
     # adds user entry to entries list in Phonebook
     petersBook.printAll()
     # prints all entries
-    userChoice = input("Are you finished: y/n")
+    userChoice = input("Are you finished: y/n: ")
+    userChoice2 = input("Would you like create another entry? y/n: ")
 
 # def printMenu():
 #     print("""

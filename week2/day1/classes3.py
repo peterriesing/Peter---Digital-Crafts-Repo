@@ -25,65 +25,84 @@
 #   - All data
 
 class phonebook:
-    def __init__(self,name,number):
-        self.name = name
-        self.number = number
-        self.phoneNumbers = []
-    def printName(self):
-        print(f"{self.name}")
-    def printNumber(self):
-        print(f"{self.number}")
-    def listAppend(self):
-        self.phoneNumbers
-    def printlist(self):
-        for person in self.phoneNumbers:
-            print(person)
+    def __init__(self):
+        # self.name = name
+        # self.number = number
+        self.phoneNumbers = [{"Peter" : "865-292-2199", "Joe" : "390-848-2939"}]
+    # def printName(self):
+    #     print(f"{self.name}")
+    # def printNumber(self):
+    #     print(f"{self.number}")
+    def listAppend(self, newEntry):
+        self.phoneNumbers.append(newEntry)
+        printMenu()
+    def printList(self):
+        for entry in self.phoneNumbers:
+            counter = 1
+            print(f"""
+            {counter}: {entry["name"]} - {entry["number"]}
+            """)
+            counter += 1
+    def delItem(self, number):
+# enumerate method to give values to list
+# user input -1 = 
+# user input must be integer - int(input("what number yo wanna del?")
+        for entry in self.phoneNumbers:
+            counter = 1
+            print(f"""
+            {counter}: {entry["name"]} - {entry["number"]}
+            """)
+            counter+= 1
+        delItem = int(input("Type the name you wish to delete: ")-1)
+        self.phoneNumbers.pop(delItem)
 
 petersPhonebook = phonebook()
 
 def printMenu():
-    print("""
-    ====================
-    Phonebook Menu
-    ====================
-    
-    1. Search for an Entry
-    2. Add an Entry
-    3. Delete an Entry
-    4. List all Entries
-    5. Exit
+    while True: 
+        print("""
+        ====================
+        Phonebook Menu
+        ====================
+        
+        1. Search for an Entry
+        2. Add an Entry
+        3. Delete an Entry
+        4. List all Entries
+        5. Exit
 
-    ====================
-    """)
-    choice = input("""
-    Choose an option by typing 1, 2, 3, 4, or 5: \n
-    """)
-    if (choice == "1"):
-        nameSearch = input("Search for a Person:\n")
-        for entry in phonebook.phoneNumbers:
-            if nameSearch == phonebook.name:
-                print(phonebook.name, phonebook.number)
+        ====================
+        """)
+        choice = input("""
+        Choose an option by typing 1, 2, 3, 4, or 5: \n
+        """)
+        if (choice == "1"):
+            nameSearch = input("Search for Entry by Name: \n")
+            for entry in petersPhonebook.phoneNumbers:
+                if nameSearch == petersPhonebook.name:
+                    print(petersPhonebook.name, petersPhonebook.number)
 
-    if (choice == "2"):
-        newName = input("  Add a New Entry\n Name:")
-        newNum = input("Number")
-        newEntry = phonebook(newName, newNum)
-        self.append(newEntry)
+        elif (choice == "2"):
+            newName = input("  Add a New Entry\n Name: ")
+            newNum = input("Number: ")
+            newEntry = {"name": newName, "number":newNum}
+            petersPhonebook.listAppend(newEntry)
 
+        elif (choice == "3"):
+            print("All Entries\n")
+            petersPhonebook.delItem()
 
+        elif (choice == "4"):
+            print("All Entries\n")
+            petersPhonebook.printList()
 
-    if (choice == "3"):
-        print(Phonebook)
-        print("Delete an Entry\n")
+        elif (choice == "5"):
+            print("Goodbye")
+            return False
+        else:
+            print("Please enter 1-5")
 
-    if (choice == "4"):
-        print("All Entries\n")
-        print(phonebook.printlist)
+printMenu()
 
-    if (choice == "5"):
-        print("Goodbye")
-
-phonebook.printList()
-
-# for name in phonebook.phoneNumbers:
-#     print(f"{phoneNumbers.name} : {phoneNumbers.number}")
+    # for name in petersPhonebook.phoneNumbers:
+    #     print(f"{phoneNumbers.name} : {phoneNumbers.number}")
