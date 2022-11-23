@@ -28,7 +28,7 @@ class phonebook:
     def __init__(self):
         # self.name = name
         # self.number = number
-        self.phoneNumbers = [{"Peter" : "865-292-2199", "Joe" : "390-848-2939"}]
+        self.phoneNumbers = []
     # def printName(self):
     #     print(f"{self.name}")
     # def printNumber(self):
@@ -37,29 +37,21 @@ class phonebook:
         self.phoneNumbers.append(newEntry)
         printMenu()
     def printList(self):
+        counter = 1
         for entry in self.phoneNumbers:
-            counter = 1
             print(f"""
             {counter}: {entry["name"]} - {entry["number"]}
             """)
             counter += 1
-    def delItem(self, number):
-# enumerate method to give values to list
-# user input -1 = 
-# user input must be integer - int(input("what number yo wanna del?")
-        for entry in self.phoneNumbers:
-            counter = 1
-            print(f"""
-            {counter}: {entry["name"]} - {entry["number"]}
-            """)
-            counter+= 1
-        delItem = int(input("Type the name you wish to delete: ")-1)
-        self.phoneNumbers.pop(delItem)
+    def delItem(self):
+        self.printList()
+        delItem = int(input("Type the number of the entry you wish to delete: "))
+        self.phoneNumbers.pop(delItem - 1)
 
 petersPhonebook = phonebook()
 
 def printMenu():
-    while True: 
+    while (True): 
         print("""
         ====================
         Phonebook Menu

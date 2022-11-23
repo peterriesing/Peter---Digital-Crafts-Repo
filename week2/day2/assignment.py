@@ -49,13 +49,11 @@ students[2]
 for student in students:
     print(student)
 # e.
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ not right
-# for student in students:
-#     print(student, " is cool")
 
-# for student in students:
-    
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ not right
+for student in students:
+    student + "is cool"
+    print(student)
+
 # f.
 if student in students == "Peter":
     print("IT ME!!")
