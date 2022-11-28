@@ -91,6 +91,7 @@ def printMenu():
         elif (choice == "5"):
             print("Goodbye")
             return False
+            
         else:
             print("Please enter 1-5")
 

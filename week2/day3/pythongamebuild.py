@@ -19,3 +19,66 @@
 #  As a user, I should be able to purchase an item from a store using coins
 #  As a user, I should be able to change my stats when I purchase an item
 #  As a user, I should be able to view my items that I currently have
+
+class Character():
+    def __init__(self,name,type,health,attack):
+        self.name = name
+        self.type = type
+        self.health = health
+        self.attack = attack
+    
+    def takeDMG(self):
+        self.health -= self.attack
+
+    def stats(self):
+        print(f"""
+            {userName} the {self.type}
+            Health:{self.health}
+            Attack:{self.attack}
+            """)
+    def menu():
+        print("""
+            1.stats
+            2.fight
+            3.quit
+            """)
+    def fightMenu():
+        print("""
+        1. attack
+        2. run
+        """)
+
+# Start Game
+print("Welcome to Dumpster Hero")
+userName = input("Enter a name for your Hero: ")
+char1 = Character(userName,"raccoon",100,50)
+enemy = Character("Buster","dog",75,75)
+print(f"{userName} the {char1.type} emerges from the dumpster in Dark Alley")
+
+userInput = ""
+playing = True
+while playing:
+    Character.menu()
+    userInput = input("Choose an Option: ")
+    if userInput == "1":
+        char1.stats()
+    
+    elif userInput == "2":
+        enemy.health = enemy.health - char1.attack
+        while enemy.health > 0:
+            Character.fightMenu()
+            print(f"{enemy.name} now has {enemy.health} health")
+            userInput = input("Choose an Option: ")
+            if userInput == "1":
+                enemy.health = enemy.health - char1.attack
+                print(f'enemy has {enemy.health}')
+            elif userInput == "2":
+                print("you run")
+                break
+        if enemy.health <= 0:
+                print(f"You slayed {enemy.name} the {enemy.type}")
+
+
+    elif userInput == "3":
+        print("goodbye")
+        playing = False
