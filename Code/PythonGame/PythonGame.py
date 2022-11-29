@@ -8,7 +8,7 @@ print("""
    (_.·´¯`·.¸¸.·´¯`·.¸_)
     """)
 
-class Hero():
+class Hero:
     def __init__(self,name,health,attack,defense):
         self.name = name
         self.health = health

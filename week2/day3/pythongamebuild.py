@@ -20,40 +20,72 @@
 #  As a user, I should be able to change my stats when I purchase an item
 #  As a user, I should be able to view my items that I currently have
 
-class Character():
-    def __init__(self,name,type,health,attack):
+class Character:
+    def __init__(self,name,type,health,attack,alive):
         self.name = name
         self.type = type
         self.health = health
         self.attack = attack
+        self.alive = alive
     
-    def takeDMG(self):
-        self.health -= self.attack
-
+    def doDMG(self, enemy):
+        if enemy.health > 0:
+            enemy.health -= self.attack
+            print(f"{enemy.name} has {enemy.health} health")
+        else:
+            enemy.alive = False
+        
     def stats(self):
         print(f"""
-            {userName} the {self.type}
-            Health:{self.health}
-            Attack:{self.attack}
-            """)
+        {userName} the {self.type}
+        Health:{self.health}
+        Attack:{self.attack}
+        """)
     def menu():
         print("""
-            1.stats
-            2.fight
-            3.quit
-            """)
+        =========
+        1.stats
+        2.fight
+        3.quit
+        =========
+        """)
     def fightMenu():
         print("""
+        =========
         1. attack
         2. run
+        =========
         """)
 
 # Start Game
-print("Welcome to Dumpster Hero")
+print("""
+     ______________,______________
+   |___|__|__|__|__|__|__|__|__|___|
+   _| ___________________________ |_
+  | |                             | |
+  |_|           DUMPSTER          |_|
+    |             HERO            |
+    | ___________________________ |
+    [_____________________________]
+         (O                 O)
+""")
 userName = input("Enter a name for your Hero: ")
-char1 = Character(userName,"raccoon",100,50)
-enemy = Character("Buster","dog",75,75)
+char1 = Character(userName,"raccoon",100,50, True)
+enemy = Character("Buster","dog",75,75, True)
+# Apple = Character("A Rotten Apple Core",25, 45)
+# Spaghetti = Character("A Pile of Spaghetti",50, 45)
+# Bandaid = Character("A Used Bandaid",5, 45)
 print(f"{userName} the {char1.type} emerges from the dumpster in Dark Alley")
+
+# listOfBaddies = [Apple, Spaghetti, Bandaid]
+# for baddie in listOfBaddies:
+#     print(baddie.name)
+# baddieToFight = input('Choose who you wanna fight')
+# if baddieToFight.lower() == 'apple':
+#     baddieToFight = Apple
+#     fightSequence(Apple)
+
+#char selection = character value
 
 userInput = ""
 playing = True
@@ -64,19 +96,29 @@ while playing:
         char1.stats()
     
     elif userInput == "2":
-        enemy.health = enemy.health - char1.attack
         while enemy.health > 0:
             Character.fightMenu()
-            print(f"{enemy.name} now has {enemy.health} health")
             userInput = input("Choose an Option: ")
             if userInput == "1":
-                enemy.health = enemy.health - char1.attack
-                print(f'enemy has {enemy.health}')
+                char1.doDMG(enemy)
+                #Peter.attack(mushroom)
+                #mushroom.hitByAttack(Peter)
             elif userInput == "2":
                 print("you run")
                 break
-        if enemy.health <= 0:
-                print(f"You slayed {enemy.name} the {enemy.type}")
+
+        print(f"You slayed {enemy.name} the {enemy.type}")
+        print("You win!!!")
+        print("Want to play again")
+        playAgain = input("Type Y/N")
+        if playAgain == 'Y':
+            #play()
+            print('run play again')
+        elif playAgain =='N':
+            quit()
+        else:
+            print('only typoe Y or N')
+                    
 
 
     elif userInput == "3":
