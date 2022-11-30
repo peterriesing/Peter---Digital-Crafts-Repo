@@ -34,16 +34,11 @@ class Character:
             print(f"{enemy.name} has {enemy.health} health")
         else:
             enemy.alive = False
-            print(f"You slayed {enemy.name} the {enemy.type}")
 
     def takeDMG(self, player):
         if player.health > 0:
             player.health -= self.attack
-            print(f"{enemy.name} dealt you {enemy.attack} damage")
-        else:
-            player.alive = False
-            print(f"{enemy.name} mauled you to death")
-
+            print(f"{enemy.name} dealt you {enemy.attack}")
         
     def stats(self):
         print(f"""
@@ -76,20 +71,14 @@ class Character:
 
         """)
 
-    def heal(self,value):
-        self.health + self.healing(value)
-        print(f"You now have {self.health}")
-
 # Start Game
 print("""
      ______________,______________
    |___|__|__|__|__|__|__|__|__|___|
-    | ___________________________ |
-   _|                             |_
+   _| ___________________________ |_
   | |                             | |
   |_| ______    DUMPSTER   ______ |_|
     |             HERO            |
-    |                             |
     | ___________________________ |
     [_____________________________]
          (O                 O)
@@ -98,13 +87,18 @@ print("""
 
 userName = input("Enter a name for your Hero: ")
 
-player = Character(userName,"raccoon",200,50,True)
 
+# MAKE CHOOSABLE CHARACTER TYPE
+
+
+char1 = Character(userName,"raccoon",100,50,True)
+# possum = Character(userName,"possum",100,50,True)
+# pigeon = Character(userName,"pigeon",100,50,True)
 enemy = Character("Scraggles","dog",75,75,True)
 # Chunks = Character("Chunks","rat",25,45,True)
 # Dangle = Character("Dangle","vulture",50,45,True)
 # Doofus = Character("Doofus","alley cat",65,45,True)
-print(f"{userName} the {player.type} emerges from the dumpster in Dark Alley")
+print(f"{userName} the {char1.type} emerges from the dumpster in Dark Alley")
 
 
 #char selection = character value
@@ -116,29 +110,30 @@ def play():
         Character.menu()
         userInput = input("Choose an Option: ")
         if userInput == "1":
-            player.stats()
+            char1.stats()
         
         elif userInput == "2":
-            while enemy.health and player.health > 0:
+            while enemy.health > 0:
                 Character.fightMenu()
                 userInput = input("Choose an Option: ")
                 if userInput == "1":
-                    player.doDMG(enemy)
-                    player.takeDMG(enemy)
+                    char1.doDMG(enemy)
+                    char1.takeDMG(enemy)
                 elif userInput == "2":
-                    print("You fled Dark Alley for now")
+                    print("You fled Dark Alley")
                     break
-                else:
-                    playAgain = input("Play again? y/n: ")
-                    if playAgain == "y":
-                        play()
-                    if playAgain =="n":
-                        quit()
-                    else:
-                        print('Please type y or n')
+
+            print(f"You slayed {enemy.name} the {enemy.type}")
+            playAgain = input("Play again? y/n: ")
+            if playAgain == "y":
+                #play()
+                print('RUN PLAY FUNCTION AGAIN')
+            elif playAgain =="n":
+                quit()
+            else:
+                print('only typoe Y or N')
+
         elif userInput == "3":
-                Character.heal()
-        elif userInput == "4":
             print("goodbye")
             playing = False
 
