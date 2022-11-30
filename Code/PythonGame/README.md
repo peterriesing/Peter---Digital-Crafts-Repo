@@ -21,3 +21,6 @@ One more thing I did when I felt the burnout of coding and getting nowhere was t
 
 ## Beyond the Project
 This was not easy for me. I felt confident making functions and classes but when it came to integrating the class elements I struggled. As mentioned above, I was hoping to put more content into the game. I need to have a better understanding of how to use dictionaries and lists within classes. Toward the completion of the game I ran into issues getting my loops to function properly. To really understand python I'll have to continue building projects like this or algorithms.
+
+## Link to Medium Article
+https://medium.com/@peter.riesing/dumpster-hero-e14d06c99063
