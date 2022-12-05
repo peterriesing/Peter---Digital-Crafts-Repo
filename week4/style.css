@@ -1,0 +1,24 @@
+h1 {
+    color: red;
+}
+
+.main-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3;
+}
+
+.students {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-wrap: reverse; - reverses so top line gets filled in last*/
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}

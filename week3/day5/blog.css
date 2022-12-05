@@ -1,0 +1,29 @@
+.content {
+    max-width: 800px;
+}
+
+.nav {
+    display: flex;
+    flex: auto;
+    background-color: gainsboro;
+}
+
+.center {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+
+.article {
+    border: 1px solid gainsboro;
+}
+.stuff {
+    display: grid;
+    grid-template-columns: 100px;
+}
+
+.foot {
+    display: grid;
+    background-color: gainsboro;
+    padding: 5px;
+    place-items: center;
+}

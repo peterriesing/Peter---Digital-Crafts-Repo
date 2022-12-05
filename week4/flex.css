@@ -1,0 +1,34 @@
+.header {
+    height: 40px;
+    background-color: lightblue;
+    align-items: center;
+}
+
+.content {
+    height: 400px;
+    display: flex;
+}
+
+#left {
+    padding: 20px;
+    background-color: rgb(255, 219, 135);
+    flex-grow: 2;
+}
+
+#center {
+    padding: 20px;
+    background-color: rgb(255, 243, 108);
+    flex-grow: 8;
+}
+
+#right {
+    padding: 20px;
+    background-color: rgb(255, 219, 135);
+    flex-grow: 1;
+}
+
+@media (width <= 600px) {
+    .content {
+        flex-direction: column;
+    }
+}

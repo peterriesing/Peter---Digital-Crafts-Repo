@@ -1,0 +1,76 @@
+* {
+    font-family: Helvetica;
+    color: white;
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding: 10px;
+    margin: 0;
+    font-size: 10px;
+    background-color: black;
+    display: flex;
+    line-height: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    display: flex;
+    line-height: 1;
+    gap: 10px;
+}
+
+#join {
+    font-size: 10px;
+    border: none;
+    border-radius: 3px;
+	padding: 6px;
+    background-color: red;
+}
+#signin {
+    font-size: 10px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+	padding: 6px;
+    
+}
+
+.content {
+    color: white;
+    font-family: Helvetica;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.categories {
+    font-family: Helvetica;
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    color: white;
+    justify-content: center;
+}
+.catname {
+    margin: 20px;
+    padding-top: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    max-height: 150px;
+}
