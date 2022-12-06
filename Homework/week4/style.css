@@ -4,11 +4,11 @@
 }
 
 body {
-    background-color: rgb(40, 40, 40);
-    height: 100%;
+    background-color: #141414;
     width: 100%;
     margin: 0;
     padding: 0;
+    height: 1400px;
 }
 
 .header {
@@ -36,7 +36,10 @@ body {
     border: none;
     border-radius: 3px;
 	padding: 6px;
-    background-color: red;
+    background-color: #E50914;
+}
+#join:hover {
+    background-color: #91080e;
 }
 #signin {
     font-size: 10px;
@@ -45,6 +48,9 @@ body {
     border-radius: 3px;
 	padding: 6px;
     
+}
+#signin:hover {
+    background-color: #2e2e2e;
 }
 
 .content {
