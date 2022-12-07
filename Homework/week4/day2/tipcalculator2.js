@@ -11,13 +11,13 @@
 
 function tipAmount(total,tip){
     if (tip === "good"){
-        console.log(total * 1.2)
-    }else if (tip = "fair"){
-        console.log(total * 1.15)
-    }else if (tip = "bad"){
-        console.log(total * 1.1)
+        console.log(total + (total * .2))
+    }else if (tip === "fair"){
+        console.log(total + (total * .15))
+    }else if (tip === "bad"){
+        console.log(total + (total * .1))
     }
 }
-tipAmount(100.00,"bad")
+tipAmount(100.00,"fair")
 
 // Why is the math not working?

@@ -15,12 +15,8 @@
 // hello(), it will print "Hello, world!",
 // otherwise it behaves the same as previously.
 
-function hello(name) {
-    if (name === name){
+function hello(name = "Hello, world!") {
     console.log("Hello, "+(name)+"!")
-    }else if (name === null){
-    console.log("Hello, world!")
-    }
 }
 hello("Mustache")
 hello()

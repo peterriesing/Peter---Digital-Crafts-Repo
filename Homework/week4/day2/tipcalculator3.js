@@ -12,16 +12,14 @@
 // 23
 
 function splitAmount(total,tip,per){
-    if (tip = "good"){
-        tip = .2
-    }else if (tip = "fair"){
-        tip = .15
-    }else if (tip = "bad"){
-        tip = .1
+    if (tip === "good"){
+        console.log((total + (total * .2))/(per))
+    }else if (tip === "fair"){
+        console.log((total + (total * .15))/(per))
+    }else if (tip === "bad"){
+        console.log((total + (total * .1))/(per))
     }
-    let split = ((total + tip) / per)
-    console.log(split)
 }
-splitAmount(75.00,"good",3)
+splitAmount(75.00,"bad",3)
 
 // Cant get the math to work

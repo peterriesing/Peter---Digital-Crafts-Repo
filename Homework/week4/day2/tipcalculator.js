@@ -14,9 +14,9 @@
 function tipAmount(total,tip){
     if (tip === "good"){
         console.log(total * .2)
-    }else if (tip = "fair"){
+    }else if (tip === "fair"){
         console.log(total * .15)
-    }else if (tip = "bad"){
+    }else if (tip === "bad"){
         console.log(total * .1)
     }
 }
