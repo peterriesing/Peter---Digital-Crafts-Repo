@@ -15,7 +15,7 @@
 // hello(), it will print "Hello, world!",
 // otherwise it behaves the same as previously.
 
-function hello(name = "Hello, world!") {
+function hello(name = "world") {
     console.log("Hello, "+(name)+"!")
 }
 hello("Mustache")
