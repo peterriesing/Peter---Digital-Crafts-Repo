@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+}
+
+* {
+    font-family: Helvetica;
+    color: white;
+}
+
+.montana {
+    max-width: 200px;
+}
+
+.pics {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
