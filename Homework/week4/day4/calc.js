@@ -21,6 +21,13 @@ for (button of operators){
     button.addEventListener("click", clickPrint)
 }
 
+
+// numbers.forEach(element => {
+//     console.log(element)
+// // });
+// This method iterates a loop like a for of loop
+
+
 // numbers[0].addEventListener("click",()=> {console.log("Click")})
 // // this applies to everything for some reason
 

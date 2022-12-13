@@ -1,0 +1,48 @@
+* {
+    font-family: Helvetica;
+}
+
+.background {
+    margin-top: 50px;
+    background-color: rgb(32, 31, 44);
+}
+
+.main {
+    background-color: rgb(93, 154, 169);
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.todo {
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item {
+    background-color: rgb(124, 187, 202);
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+.item > button {
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    background-color: black;
+    color: white;
+    max-width: 20px;
+    max-height: 20px;
+}
