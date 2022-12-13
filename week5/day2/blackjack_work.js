@@ -12,7 +12,7 @@ const makeDeck = (rank, suit) => {
         }
     };
     deck.push(card);
-
+console.log(deck)
 
 for (let suit of suits) {
     for (const rank of ranks) {

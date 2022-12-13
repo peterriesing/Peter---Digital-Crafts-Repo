@@ -88,8 +88,6 @@ for (let suit of suits) {
 // }
 
 // load game when window opened
-window.addEventListener("DOMContentLoaded", () => {
-    // dealButton.addEventListener("click", deal)
-    // hitButton.addEventListener("click", hit)
-});
+// window.addEventListener("DOMContentLoaded", () => {
 
+// })
