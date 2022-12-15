@@ -10,8 +10,9 @@ const makeDeck = (rank, suit) => {
         suit: suit,
         src: `${rank}_of_${suit}.png`,
         }
-    };
     deck.push(card);
+    };
+    
 console.log(deck)
 
 for (let suit of suits) {
