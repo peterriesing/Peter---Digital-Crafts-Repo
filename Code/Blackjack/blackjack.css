@@ -13,7 +13,7 @@ body {
     margin: 0 auto 10px;
     height: 1em;
     font-size: 18px;
-    color: rgb(22, 77, 8);
+    color: rgb(21, 28, 19);
   }
   
   .message-box.error {
@@ -23,9 +23,9 @@ body {
   .table {
     width: 900px;
     max-width: calc(100% - 20px);
-    border: 8px solid rgb(10, 43, 2);
+    border: 8px solid rgb(21, 28, 19);
     border-radius: 20px;
-    background: rgb(22, 77, 8);
+    background: rgb(39, 55, 34);
     margin: 0 auto;
     color: white;
     padding: 30px;
@@ -47,7 +47,7 @@ body {
   
   .hand {
     height: 120px;
-    background: rgba(10, 43, 2, 0.5);
+    background: rgba(39, 68, 31, 0.5);
     border-radius: 5px;
   }
   
