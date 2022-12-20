@@ -1,0 +1,114 @@
+body{
+    background-color: rgb(32, 26, 26);
+}
+/* .top-container{
+    background-color: rgb(71, 71, 71);
+} */
+
+.moviePoster{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    transition: .2s;
+}
+.moviePoster:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+.movieCard{
+    width: 300px;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 200px;
+    color: rgb(250, 241, 241);
+    font-family: Helvetica;
+    padding-top: 10px;
+}
+
+.movieStats{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.movieCard h2{
+    font-size: 14px;
+}
+
+.titleDiv{
+    padding-top: 10px;
+    height: 60px;
+}
+
+.moviePeople{
+    width: 200px;
+    border-top: 1px solid rgb(100, 100, 100);
+    font-size: 12px;
+    color: rgb(175, 175, 175);
+}
+.movieStats {
+    width: 200px;
+    border-top: 1px solid rgb(100, 100, 100);
+    font-size: 12px;
+    color: rgb(175, 175, 175);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.movie-card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 20px;
+}
+.search-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(20, 161, 255);
+    margin: 0;
+}
+
+.search-container h1 {
+    color: rgb(243, 244, 248);
+    font-family: Gill Sans;
+    padding-left: 100px;
+}
+
+.search-input{
+    height: 22px;
+    width: 150px;
+    font-size: 16px;
+    border-style: none;
+    border-radius: 3px;
+}
+
+.search-button{
+    color: beige;
+    background-color: rgb(85, 108, 255);
+    border-style: none;
+    border-radius: 3px;
+    padding: 6px;
+    margin: 5px;
+    font-weight: 900;
+    font-size: 12px;
+    transition-duration: 0.2s;
+}
+.search-button:hover{
+    background-color:rgb(44, 57, 140);
+}
+
+.search{
+    grid-column: 2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 100px;
+    
+}
