@@ -4,8 +4,8 @@ const searchMovies = async () => {
     const inputField = document
         .querySelector(".search-input").value.replace(/\s/g, "+");
     console.log(inputField);
+    
     const movieURL = `http://www.omdbapi.com/?apikey=#######&s=${inputField}`;
-
     const rawData = await fetch(movieURL);
     const json = await rawData.json();
 

@@ -1,14 +1,8 @@
-// let cocktailName = document.querySelector(".input").value
-
-// const searchNameURL = `www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
-
-// // const cocktailID
-
-// const margaritaURL = "www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007"
+const searchResultsContainer = document.querySelector(".searchResultsContainer")
 
 const searchCocktailName = async () =>{
     const resultContainer = document.createElement("div")
-    resultContainer.classList = "recipeContainer"
+    resultContainer.classList = "resultContainer"
     resultContainer.innerHTML = ""
 
     const searchInput = document.querySelector(".input").value
@@ -17,20 +11,21 @@ const searchCocktailName = async () =>{
     const apiData = await fetch(searchNameURL)
     const apiCocktails = await apiData.json()
 
-    console.log(apiCocktails.drinks)
+    apiCocktails.drinks.forEach(async = (cocktail) => {
+        console.log(cocktail.strDrink)
+        const cocktailCard = document.createElement("div")
+        const cocktailImage = document.createElement("img")
+        const cocktailName = document.createElement("h1")
 
-    // apiCocktails.drinks.foreach(async (cocktail) =>{
-    //     const cocktailCard = document.createElement("div")
-    //     const cocktailImage = document.createElement("img")
-    //     const cocktailName = document.createElement("h1")
-    //     console.log(cocktail.strDrink)
-    //     cocktailImage.src = apiCocktails.drinks.strDrinkThumb
-    //     cocktailName.innerText = apiCocktails.drinks.strDrink
+        cocktailCard.className = "cocktailCard"
+        cocktailName.className = "cocktailName"
+        cocktailImage.src = cocktail.strDrinkThumb
+        cocktailName.innerText = cocktail.strDrink
 
-    //     cocktailCard.append(cocktailImage,cocktailName)
-    //     resultContainer.append(cocktailCard)
-    // })
-
+        cocktailCard.append(cocktailImage,cocktailName)
+        resultContainer.append(cocktailCard)
+        searchResultsContainer.append(resultContainer)
+    });
 }
 
 
