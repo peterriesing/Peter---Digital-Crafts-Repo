@@ -1,23 +1,30 @@
 body {
-    background-color:#0e1814;
+    background-color:#f3eee5;
     margin: 0px;
 }
 
 /* ============================= Nav Bar ============================= */
 
 .navbar {
+    background-color: #f3eee5;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin:20px 0px 0px 20px;
-    padding-bottom: 20px;
+    padding: 20px;
+    margin: 0%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    
+
 }
 
 .navbar > a {
     text-decoration: none;
-    color:#f3eee5;
+    color:#1c7fbd;
     font-family: Helvetica;
     font-weight: 200;
     font-size: 14px;
@@ -25,26 +32,28 @@ body {
 }
 
 .navbar > a:hover{
-    color: #74bbe7;
+    color: #02273f;
 }
 
 /* ============================= Index Page ============================= */
 
 .coverDiv{
+    margin-top: 56px;
     background-image: url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80);
     background-size: cover;
-    padding: 150px 0px 150px 0px;
+    width: 100vw;
+    height: 400px;
     display: flex;
-    justify-content: center;
 }
 
 .coverText{
     font-family:'Gill Sans', sans-serif;
     font-weight: 100;
-    text-align: center;
     color: #f3eee5;
     font-size: 100px;
-    text-shadow:2px 2px 5px #0e1814;
+    text-shadow:2px 2px 5px #162638;
+    width: 500px;
+    padding-left: 50px;
 }
 
 /* ============================= Search Page ============================= */
@@ -52,7 +61,8 @@ body {
     background-color: #f3eee5;
     background-image: url(https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
     background-size: cover;
-    margin: 0px;
+    width: 100vw;
+    height: 400px;
     /* mix-blend-mode: screen; */
 }
 
@@ -68,7 +78,7 @@ body {
 }
 
 .searchBar input {
-    border: 2px solid #0e1814;
+    border: 1px solid #162638;
     background-color:#f3eee5;
     color:black;
     height: 20px;
@@ -86,9 +96,9 @@ body {
 
 .searchButton{
     border-style: none;
-    background-color: #0e1814;
+    background-color: #162638;
     color: #f3eee5;
-    height: 28px;
+    height: 26px;
     transition-duration: .2s;
 }
 
@@ -109,24 +119,25 @@ body {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 30px;
     margin: 20px 20px 20px 20px;
 }
 
 .cocktailCard {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
     background-color:#f3eee5;
     border-radius: 2px;
+    filter: drop-shadow(0px 0px 4px #c4c0b8);
 }
 
 .cocktailName{
-    color: #0e1814;
-    border-top: 1px solid #74bbe7;
+    color: #162638;
+    /* border-top: 1px solid #74bbe7;
     padding-top: 5px;
     border-bottom: 1px solid #74bbe7;
-    padding-bottom: 5px;
+    padding-bottom: 5px; */
     margin: 5px;
     font-family: Helvetica;
     font-weight: 400;
@@ -135,7 +146,79 @@ body {
 }
 
 .cocktailCard img {
-    background-color: #0e1814;
-    width: 200px;
+    background-color: #162638;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
     border-radius: 2px 2px 0px 0px;
+}
+
+/* ============================= Recipe Page ============================= */
+
+.individualCocktail{
+    background-color: #f3eee5;
+    margin: 72px 60px 120px 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px #c4c0b8;
+    font-family: Helvetica;
+}
+
+.recipeImage{
+    height: 300px;
+    width: 300px;
+}
+
+.recipeDetailsDiv{
+    margin: 0px 20px 0px 20px;
+}
+
+.recipeNameDiv{
+    font-size: 16px;
+}
+
+.recipeInfoDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipeInfoDiv h1{
+    font-size: 12px;
+    height: 12px;
+    width: fit-content;
+    background-color: #c4c0b8;
+    border-radius: 8px;
+    color: #f3eee5;
+    padding:10px;
+}
+
+.recipeIngredientDiv{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+}
+
+.recipeInstructionDiv{
+    max-width: 600px;
+}
+
+/* ============================= FOOTER ============================= */
+
+footer {
+    background-color: #c4c0b8;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100px;
+    font-family: Helvetica;
+    color: #f3eee5;
+    position:static;
+    bottom: 0;
 }

@@ -10,13 +10,19 @@ const searchCocktailName = async () =>{
     const searchNameURL = `http://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchInput}`
     const apiData = await fetch(searchNameURL)
     const apiCocktails = await apiData.json()
-
+    // helper function to set item in local storage that way we can get the name
+    // then navigate to recipe.html
+    const searchRecipe = (id) => {
+        console.log(id)
+        localStorage.setItem("cocktail", id)
+        window.location.href = "recipe.html"
+    }
     apiCocktails.drinks.forEach(async = (cocktail) => {
-        console.log(cocktail.strDrink)
         const cocktailCard = document.createElement("div")
         const cocktailImage = document.createElement("img")
-        const cocktailName = document.createElement("h1")
-
+        const cocktailName = document.createElement("button")
+        // on click eventlistener
+        cocktailName.onclick = () =>searchRecipe(cocktail.idDrink)
         cocktailCard.className = "cocktailCard"
         cocktailName.className = "cocktailName"
         cocktailImage.src = cocktail.strDrinkThumb
@@ -28,6 +34,11 @@ const searchCocktailName = async () =>{
     });
 }
 
+// another function that expands the cocktail card and adds details and recipe upon clicking the name, "+", "recipe", or "see more"
+
+// maybe change the class name so the styling can change
+// how to remove the styling when 
 
 const searchButton = document.querySelector(".searchButton")
 searchButton.addEventListener("click", searchCocktailName)
+
