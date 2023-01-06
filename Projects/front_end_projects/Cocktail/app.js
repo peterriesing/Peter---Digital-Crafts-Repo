@@ -13,7 +13,6 @@ const searchCocktailName = async () =>{
     // helper function to set item in local storage that way we can get the name
     // then navigate to recipe.html
     const searchRecipe = (id) => {
-        console.log(id)
         localStorage.setItem("cocktail", id)
         window.location.href = "recipe.html"
     }
@@ -32,12 +31,7 @@ const searchCocktailName = async () =>{
         resultContainer.append(cocktailCard)
         searchResultsContainer.append(resultContainer)
     });
-}
-
-// another function that expands the cocktail card and adds details and recipe upon clicking the name, "+", "recipe", or "see more"
-
-// maybe change the class name so the styling can change
-// how to remove the styling when 
+} 
 
 const searchButton = document.querySelector(".searchButton")
 searchButton.addEventListener("click", searchCocktailName)

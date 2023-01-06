@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocktail Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar">
+        <img class="logo" src="cocktail.svg" alt="">
         <a href="index.html">Home</a>
         <a href="search.html">Search</a>
-        <a href="">Ingredients</a>
-        <a href="">About</a>
+        <a href="about.html">About</a>
     </div>
     <div class="coverDiv">
         <h1 class="coverText">Check out these flavors</h1>
@@ -21,8 +22,16 @@
         <div class="searchResultsContainer">
             <div class="resultContainer">
                 <div class="cocktailCard">
-                    <img src="https://images.unsplash.com/photo-1541976076758-347942db1975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1767&q=80" alt="Classic Margarita">
-                    <h1 class="cocktailName">Classic Margarita</h1>
+                    <img src="https://www.thecocktaildb.com/images/media/drink/km84qi1513705868.jpg" alt="Boulevardier">
+                    <a href="http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13214">Pisco Sour</a>
+                </div>
+                <div class="cocktailCard">
+                    <img src="https://www.thecocktaildb.com/images/media/drink/tsssur1439907622.jpg" alt="Pisco Sour">
+                    <a href="http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17251">Boulevardier</a>
+                </div>
+                <div class="cocktailCard">
+                    <img src="https://www.thecocktaildb.com/images/media/drink/tsssur1439907622.jpg" alt="Pisco Sour">
+                    <a href="http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17251">Boulevardier</a>
                 </div>
             </div>
         </div>
@@ -31,6 +40,9 @@
 <footer>
     <div>
         <p>Look, mom! I made this thing. Now, put it on the fridge.</p>
+        <p>This site is for demo purpose only</p>
+        <p>API:</p>
+        <a href="https://www.thecocktaildb.com/">The Cocktail DB</a>
     </div>
 </footer>
 <script src="app.js"></script>

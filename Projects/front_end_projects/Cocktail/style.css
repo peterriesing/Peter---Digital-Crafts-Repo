@@ -1,38 +1,46 @@
 body {
-    background-color:#f3eee5;
+    background-color: #f3eee5;
     margin: 0px;
 }
 
 /* ============================= Nav Bar ============================= */
 
 .navbar {
-    background-color: #f3eee5;
+    background-color: #c4a600;
+    box-shadow: 0px 0px 5px #897f46;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin:20px 0px 0px 20px;
-    padding: 20px;
-    margin: 0%;
+    height: 56px;
     width: 100vw;
     position: fixed;
     top: 0;
-    
+    z-index: 9999;
+}
+
+.logo{
+    height: 20px;
 
 }
 
 .navbar > a {
     text-decoration: none;
-    color:#1c7fbd;
-    font-family: Helvetica;
-    font-weight: 200;
+    letter-spacing: 2px;
+    color:#f3eee5;
+    font-family: Kanit;
+    font-weight: 400;
     font-size: 14px;
     transition-duration: .2s;
 }
 
 .navbar > a:hover{
-    color: #02273f;
+    color: #c4a600;
+}
+
+.navbar > a.active{
+    background-color: #c4a600;
 }
 
 /* ============================= Index Page ============================= */
@@ -50,7 +58,7 @@ body {
     font-family:'Gill Sans', sans-serif;
     font-weight: 100;
     color: #f3eee5;
-    font-size: 100px;
+    font-size: 20px;
     text-shadow:2px 2px 5px #162638;
     width: 500px;
     padding-left: 50px;
@@ -58,12 +66,12 @@ body {
 
 /* ============================= Search Page ============================= */
 .searchBackground {
+    margin-top: 56px;
     background-color: #f3eee5;
     background-image: url(https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
     background-size: cover;
     width: 100vw;
     height: 400px;
-    /* mix-blend-mode: screen; */
 }
 
 .search{
@@ -73,12 +81,12 @@ body {
 .searchBar {
     display: flex;
     justify-content: center;
-    padding: 100px 0px 100px 0px;
+    padding-top: 187px;
     margin: 0px;
 }
 
 .searchBar input {
-    border: 1px solid #162638;
+    border: 1px solid #091019;
     background-color:#f3eee5;
     color:black;
     height: 20px;
@@ -91,27 +99,26 @@ body {
 }
 
 .searchBar ::placeholder {
-    color:#74bbe7;
+    color:#7797ac;
 }
 
 .searchButton{
     border-style: none;
-    background-color: #162638;
+    background-color: #091019;
     color: #f3eee5;
     height: 26px;
     transition-duration: .2s;
 }
 
 .searchButton:hover{
-    color: #0e1814;
-    background-color: #74bbe7;
+    background-color: #1e6ea3;
 }
 
 .searchResultsContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 20px;
+    padding: 20px 0px;
 }
 
 .resultContainer{
@@ -129,96 +136,202 @@ body {
     width: 300px;
     background-color:#f3eee5;
     border-radius: 2px;
-    filter: drop-shadow(0px 0px 4px #c4c0b8);
+    box-shadow: 0px 0px 5px #cbc6bf;
 }
 
 .cocktailName{
-    color: #162638;
-    /* border-top: 1px solid #74bbe7;
-    padding-top: 5px;
-    border-bottom: 1px solid #74bbe7;
-    padding-bottom: 5px; */
+    color: #091019;
+    background-color: #f3eee5;
     margin: 5px;
-    font-family: Helvetica;
+    font-family: 'Kanit', 'sans-serif';
     font-weight: 400;
     font-size: 14px;
     text-align: center;
+    border-style: none;
+    cursor: pointer;
 }
 
 .cocktailCard img {
-    background-color: #162638;
+    background-color: #091019;
     height: 300px;
     width: 300px;
     object-fit: cover;
     border-radius: 2px 2px 0px 0px;
 }
 
+@media screen and (max-width: 682px) {
+    .cocktailCard{
+        box-shadow: none;
+    }.cocktailName{
+        border-bottom: 2px solid #c4a600;
+        font-size: larger;
+        margin: 0px;
+        padding: 5px 0px;
+    }
+}
+
 /* ============================= Recipe Page ============================= */
 
 .individualCocktail{
     background-color: #f3eee5;
-    margin: 72px 60px 120px 60px;
+    margin: 100px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    box-shadow: 0px 0px 10px #c4c0b8;
+    box-shadow: 0px 0px 10px #000000;
     font-family: Helvetica;
+    color: #18273b;
+    width: fit-content;
+    
 }
 
 .recipeImage{
+    margin: 30px;
     height: 300px;
     width: 300px;
 }
 
 .recipeDetailsDiv{
-    margin: 0px 20px 0px 20px;
+    margin: 30px 30px 30px 0px;
 }
 
 .recipeNameDiv{
     font-size: 16px;
+    max-width: 300px;
 }
 
-.recipeInfoDiv{
+.recipeNameDiv h1{
+    margin: 0px 0px 5px 0px;
+    font-family: Kanit;
+}
+
+.recipeGlassDiv{
+    border-top: 2px solid #c4a600;
+    color: #2b4e63;
+}
+
+.recipeGlassDiv h1{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.recipeItemsDiv{
+    color: #2b4e63;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+    height: fit-content;
 }
 
-.recipeInfoDiv h1{
+.recipeText{
+    color: #7797ac;
     font-size: 12px;
-    height: 12px;
+    font-weight: bold;
+}
+
+.recipeMeasureDiv{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 3px;
+    font-size: 14px;
+    text-align: right;
     width: fit-content;
-    background-color: #c4c0b8;
-    border-radius: 8px;
-    color: #f3eee5;
-    padding:10px;
 }
 
 .recipeIngredientDiv{
-    padding-top: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
-    gap: 10px;
+    gap: 3px;
+    font-size: 14px;
+    width: fit-content;
 }
 
 .recipeInstructionDiv{
-    max-width: 600px;
+    max-width: 300px;
+    color: #2b4e63;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 700px){
+    .individualCocktail{
+        box-shadow: none;
+        justify-content: center;
+        margin-top: 56px;
+        margin-bottom: 50px;
+    }.recipeDetailsDiv{
+        margin: 0px;
+    }.recipeImage{
+        width: fit-content;
+        height: 100vw;
+        margin: 0px 0px 15px 0px;
+    }
+    
+}
+
+/* ============================= ABOUT ============================= */
+
+.aboutPics{
+    width: 100%;
+    max-width: 800px;
+}
+
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    position: relative;
+    max-width: 800px;
+}
+
+.tiles img{
+    height: 600px;
+}
+
+#img1{
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 2;
+}
+
+#img2{
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+}
+
+#img3{
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+}
+
+#img2{
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 2;
 }
 
 /* ============================= FOOTER ============================= */
 
 footer {
-    background-color: #c4c0b8;
+    background-color: #c4a600;
     display: flex;
     justify-content: center;
     flex-direction: row;
+    padding: 50px 0px;
     margin-bottom: 0px;
     width: 100%;
-    height: 100px;
+    height: fit-content;
     font-family: Helvetica;
+    text-align: center;
+    font-size: 12px;
+    color:#f3eee5;
+}
+
+footer p {
+    margin: 6px;
+}
+footer a{
+    margin: 6px;
+    text-decoration: none;
     color: #f3eee5;
-    position:static;
-    bottom: 0;
 }
