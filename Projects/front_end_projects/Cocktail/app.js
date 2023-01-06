@@ -1,6 +1,6 @@
-const searchResultsContainer = document.querySelector(".searchResultsContainer")
-
 const searchCocktailName = async () =>{
+    const searchResultsContainer = document.querySelector(".searchResultsContainer")
+    searchResultsContainer.innerHTML = ""
     const resultContainer = document.createElement("div")
     resultContainer.classList = "resultContainer"
     resultContainer.innerHTML = ""

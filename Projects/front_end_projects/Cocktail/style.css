@@ -36,11 +36,7 @@ body {
 }
 
 .navbar > a:hover{
-    color: #c4a600;
-}
-
-.navbar > a.active{
-    background-color: #c4a600;
+    color:#091019;
 }
 
 /* ============================= Index Page ============================= */
@@ -55,13 +51,23 @@ body {
 }
 
 .coverText{
-    font-family:'Gill Sans', sans-serif;
-    font-weight: 100;
+    font-family: Kanit;
+    font-weight: 200;
     color: #f3eee5;
-    font-size: 20px;
+    font-size: 80px;
     text-shadow:2px 2px 5px #162638;
     width: 500px;
     padding-left: 50px;
+}
+
+.featured{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.featuredHead{
+    font-family: Kanit;
+    margin: 0px;
 }
 
 /* ============================= Search Page ============================= */
@@ -142,13 +148,18 @@ body {
 .cocktailName{
     color: #091019;
     background-color: #f3eee5;
-    margin: 5px;
     font-family: 'Kanit', 'sans-serif';
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
+    padding: 5px 0px;
     border-style: none;
     cursor: pointer;
+    transition-duration: .2s;
+}
+
+.cocktailName:hover{
+    background-color: #c4a600;
 }
 
 .cocktailCard img {
@@ -178,7 +189,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 10px #cbc6bf;
     font-family: Helvetica;
     color: #18273b;
     width: fit-content;
@@ -273,17 +284,15 @@ body {
 
 /* ============================= ABOUT ============================= */
 
-.aboutPics{
-    width: 100%;
-    max-width: 800px;
-}
-
 .tiles{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: repeat(16, 100px);
     position: relative;
-    max-width: 800px;
+    justify-content: center;
+    height: fit-content;
+    font-family: Kanit;
+    color: #c4a600;
 }
 
 .tiles img{
@@ -291,29 +300,59 @@ body {
 }
 
 #img1{
-    grid-column: 2 / span 2;
-    grid-row: 1 / span 2;
+    grid-column: 4;
+    grid-row: 2;
 }
 
 #img2{
-    grid-column: 1 / span 2;
-    grid-row: 2 / span 2;
+    grid-column: 7;
+    grid-row: 5;
 }
 
 #img3{
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 2;
+    grid-column: 3;
+    grid-row: 7;
+    z-index: 1;
 }
 
-#img2{
-    grid-column: 1 / span 2;
-    grid-row: 4 / span 2;
+#img4{
+    grid-column: 6;
+    grid-row: 10;
+}
+
+#proj{
+    grid-column: 9/ span 2;
+    grid-row: 2;
+    margin: 0px;
+}
+
+#name{
+    grid-column: 9/ span 2;
+    grid-row: 3;
+    font-weight: 400;
+    margin: 0px;
+}
+#grid{
+    grid-column: 3/ span 3;
+    grid-row: 14;
+    margin: 0px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px){
+    .tiles{
+        margin: 56px;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 56px auto;
+    }
 }
 
 /* ============================= FOOTER ============================= */
 
 footer {
-    background-color: #c4a600;
+    background-color: #cbc6bf;
     display: flex;
     justify-content: center;
     flex-direction: row;
