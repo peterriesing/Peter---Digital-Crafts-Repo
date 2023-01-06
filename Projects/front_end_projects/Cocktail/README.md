@@ -1,1 +1,1 @@
-![alt text](cocktail.png)
+![alt text](cocktail_outline.png)
