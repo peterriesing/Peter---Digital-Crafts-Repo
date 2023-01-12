@@ -1,0 +1,63 @@
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+
+}
+
+.navbar-brand{
+    margin-right: 30px;
+}
+
+.main{
+    margin: 20px 0px;
+    background-color: rgb(221, 240, 251);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px ;
+    border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.top h1 {
+    color: rgb(59, 81, 94);
+    margin: 0px;
+    font-size: 2rem;
+}
+.top h2 {
+    color: rgb(98, 136, 158);
+    margin: 0px;
+    font-size: 1.5rem;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bottom img{
+    margin: 0px 0px 30px 30px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.bottom p{
+    color: rgb(98, 136, 158);
+    margin: 0px;
+}
+
+.bottomText{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px;
+}
