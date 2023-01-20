@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <header><%- include('../partials/header'); %></header>
+  <body>
+    <form action="/user/create_user" method="post">
+      <input name="userName" type="text" placeholder="username" />
+      <input name="password" type="password" placeholder="password" />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>

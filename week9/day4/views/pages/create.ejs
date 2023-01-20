@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+  </head>
+  <header><%- include('../partials/header'); %></header>
+  <body>
+    <form action="/user/create_user" method="post">
+      <input name="firstName" type="text" placeholder="First Name" />
+      <input name="lastName" type="text" placeholder="Last Name" />
+      <input name="userName" type="text" placeholder="username" />
+      <input name="password" type="password" placeholder="password" />
+      <input type="submit" name="Sumbit" value="submit" />
+    </form>
+  </body>
+</html>
