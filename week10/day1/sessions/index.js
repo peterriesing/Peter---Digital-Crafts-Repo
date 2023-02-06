@@ -29,6 +29,7 @@ app.use(
   })
 );
 store.sync();
+
 app.set("view engine", "ejs");
 //session authenitication function
 const authenticate = (req, res, next) => {
@@ -70,7 +71,7 @@ app.post("/login", async (req, res) => {
   });
   console.log(user);
   if (!user) {
-    res.send(400).send("no user witht that name exists");
+    res.status(400).send("no user witht that name exists");
     return;
   }
   if (user.password === req.body.password) {

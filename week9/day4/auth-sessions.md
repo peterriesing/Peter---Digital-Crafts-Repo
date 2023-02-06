@@ -44,4 +44,16 @@ route.js
 -
 - module.exports = router
 
+# ElephantSQL
+Online Database
+
+- Create database on browser
+- run server and install dependencies
+- initialize sequelize (need to run 'npm i sequelize-cli' to use 'npx sequelize' commands)
+- 'npx sequelize model:generate
+
+
+
 # Sessions
+Storing Data
+

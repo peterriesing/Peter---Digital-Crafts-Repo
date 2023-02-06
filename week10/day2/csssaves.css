@@ -1,0 +1,305 @@
+/* colors:
+    #d63c3c
+    #008cbd
+    #0c0024
+    #531b6c
+    #e2dddb */
+
+/* Dunbar Tall Regular
+font-family: "dunbar-tall", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Dunbar Tall Medium
+font-family: "dunbar-tall", sans-serif;
+font-weight: 600;
+font-style: normal;
+
+Dunbar Tall Bold
+font-family: "dunbar-tall", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Dunbar Tall Extra Bold
+font-family: "dunbar-tall", sans-serif;
+font-weight: 800;
+font-style: normal;
+
+Dunbar Tall Ultra
+font-family: "dunbar-tall", sans-serif;
+font-weight: 900;
+font-style: normal;
+
+Dunbar Text Regular
+font-family: "dunbar-text", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Dunbar Text Bold
+font-family: "dunbar-text", sans-serif;
+font-weight: 700;
+font-style: normal; */
+
+body {
+  background-color: #531b6c;
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #e2dddb;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin: 60px auto;
+  align-items: center;
+}
+
+.logo {
+  max-width: 150px;
+  margin: auto;
+}
+
+.vote {
+  min-width: 100px;
+  max-width: 300px;
+}
+
+label {
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+input[type="submit"] {
+  background-color: #0c0024;
+  color: #e2dddb;
+  border-style: none;
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 3px;
+  padding: 6px 10px;
+  width: fit-content;
+}
+
+input[type="text"] {
+  border-style: none;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 300px;
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+input[type="text"]::placeholder {
+  color: #b8b3b1;
+}
+
+input[type="password"] {
+  border-style: none;
+  padding: 6px;
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+input[type="password"]::placeholder {
+  color: #b8b3b1;
+}
+
+/* LOGIN */
+.createquery {
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+}
+.loginmain {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  gap: 10px;
+  margin: auto;
+}
+
+.loginform {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.createquerydiv {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 10px;
+  margin: auto;
+}
+
+/* CREATE */
+.creatediv {
+  margin-top: 25px;
+}
+
+.createform {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 10px;
+  margin: auto;
+}
+
+/* HUB */
+.districtinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.districtinfo h1 {
+  margin: 0px;
+}
+.districtinfo h2 {
+  margin: 0px;
+}
+.districtinfo h3 {
+  margin: 0px;
+}
+
+/* HUB POSITION CARDS */
+.positions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.positioncard {
+  background-color: #e2dddb;
+  width: 400px;
+  height: fit-content;
+  padding: 15px;
+}
+
+.positiontitle {
+  color: #0c0024;
+}
+
+.positiontitle h1 {
+  font-size: 20px;
+}
+
+.positiontitle p {
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #531b6c;
+}
+
+.positionbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+
+.positionbuttons button {
+  background-color: #0c0024;
+  color: #e2dddb;
+  border-style: none;
+  font-family: "dunbar-tall", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 3px;
+  width: fit-content;
+  padding: 6px 10px;
+}
+
+/* ADMIN */
+.admin {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+#adminlogo {
+  height: 50px;
+}
+
+.admin h1 {
+  color: #0c0024;
+  font-size: 25px;
+}
+
+.admintop {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  border-bottom: 2px solid #0c0024;
+}
+
+.positiondiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.addupdate {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.deletediv {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#select {
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-style: none;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+#textarea {
+  font-family: "dunbar-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  border-style: none;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 6px;
+}
+
+#textarea::placeholder {
+  color: #b8b3b1;
+}
+
+/* .candidate1{
+  }
+  
+  .candidatebutt{
+  
+  } */
