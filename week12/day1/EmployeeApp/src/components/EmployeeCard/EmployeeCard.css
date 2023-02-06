@@ -1,0 +1,24 @@
+.Employee {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  border-radius: 3px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.Pic {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Pic img {
+  width: 200px;
+  height: fit-content;
+}
+
+.Info {
+  text-align: left;
+}

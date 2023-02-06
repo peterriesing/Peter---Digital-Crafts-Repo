@@ -62,3 +62,11 @@ export const Function = ({data}) =>{
     }
 }
 ```
+
+## States & Hooks
+
+Look up lifecycles
+
+`import { useState } from "react"`
+
+`const [variable, function] = useState(value)`

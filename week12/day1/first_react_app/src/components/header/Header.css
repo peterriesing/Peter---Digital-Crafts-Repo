@@ -2,3 +2,10 @@
   color: rgb(0, 154, 215);
   letter-spacing: 2px;
 }
+.Header p {
+  font-size: smaller;
+  margin: 0px;
+}
+.Header h3 {
+  margin: 0px;
+}
