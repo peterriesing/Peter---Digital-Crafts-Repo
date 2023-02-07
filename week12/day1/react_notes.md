@@ -40,6 +40,14 @@ export const FunctionName = () =>{
 }
 ```
 
+THERE IS A DIFFERENCE BETWEEN `export const functionname` AND `export default App`.
+
+Import a component by using `rafc` and placing it in curly braces in the import staement.
+` import { Blah } from './comp/Blah/Blah'`
+
+Import a page/jsx file with `rafce` with no curly braces in the import statement. Adds a `export default Thing`.
+` import Thing from './comp/Thing/Thing'`
+
 ## Props
 
 Naming is very important!
@@ -70,3 +78,12 @@ Look up lifecycles
 `import { useState } from "react"`
 
 `const [variable, function] = useState(value)`
+
+## Routes
+
+1. Before launching server run `npm i react-router-dom`.
+2. On main.jsx `import {BroserRouter} from 'react-router-dom'`.
+3. On main.jsx wrap `<App/>` in `<BrowerRouter></BrowerRouter>`.
+4. On App.jsx `import {Route,Routes} from 'react-router-dom'`.
+5. On App.jsx make `<Routes></Routes>` the top level return (can be within a fragment)
+6. On App.jsx call routes with `<Route path="/routename" element={<ElementName />} />` within `<Routes></Routes>`
