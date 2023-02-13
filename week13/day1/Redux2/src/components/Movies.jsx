@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addMovie } from "../reducers/moviesSlice";
 import { useState } from "react";
+import MovieContainer from "./MovieContainer";
 
 const Movies = () => {
   const [movieToAdd, setMovieToAdd] = useState("");
@@ -19,6 +20,9 @@ const Movies = () => {
       <button onClick={() => dispatch(addMovie({ name: movieToAdd }))}>
         Add
       </button>
+      <div className="results">
+        <MovieContainer />
+      </div>
     </div>
   );
 };
