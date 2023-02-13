@@ -1,0 +1,77 @@
+.main {
+  background-color: rgb(0, 166, 255);
+  margin: auto;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid white;
+}
+/* TITLE */
+.contact {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.inputDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.inputTitle {
+  width: 150px;
+  color: white;
+}
+.inputFields {
+  display: flex;
+  gap: 20px;
+  width: 400px;
+}
+.inputFields input {
+  width: 190px;
+}
+
+.textarea {
+  height: 100px;
+  width: 400px;
+}
+
+.captcha {
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0px 10px;
+}
+
+.checkDiv {
+  display: flex;
+  gap: 5px;
+  color: black;
+  font-size: 0.75rem;
+}
+
+.captchaLogo {
+  height: 50px;
+}
+
+.submit {
+  font-weight: 600;
+  border: 1.5px solid white;
+  border-radius: 5px;
+  padding: 1% 4%;
+  width: fit-content;
+  color: white;
+}
