@@ -1,12 +1,15 @@
 import "./App.css";
-import Counter from "./components/Counter";
 import Movies from "./components/Movies";
+import MovieContainer from "./components/MovieContainer";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Counter />
-      <Movies />
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        <Route path="/movie" element={<MovieContainer />} />
+      </Routes>
     </div>
   );
 }
