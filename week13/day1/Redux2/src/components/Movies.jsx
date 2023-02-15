@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { searchMovie } from "../reducers/moviesSlice";
 import { useState } from "react";
 import MovieCard from "./MovieCard";
+import Navbar from "./Navbar";
 
 const Movies = () => {
   const movies = useSelector((state) => state.movies);
@@ -22,12 +23,18 @@ const Movies = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search by title"
-        onChange={(e) => setMovieToFetch(e.target.value)}
-      />
-      <button onClick={() => APIfunction()}>Search</button>
+      <Navbar />
+      <div className="search">
+        <input
+          className="searchBar"
+          type="text"
+          placeholder="Search by title"
+          onChange={(e) => setMovieToFetch(e.target.value)}
+        />
+        <button className="searchButton" onClick={() => APIfunction()}>
+          Search
+        </button>
+      </div>
       <div className="resultContainer">
         {movies.map((movie) => {
           return <MovieCard movie={movie} />;

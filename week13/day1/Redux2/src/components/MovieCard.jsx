@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const MovieCard = ({ movie }) => {
   return (
     <div>
-      <Link to={`movie`} state={movie.imdbID}>
+      <Link className="movieCard" to={`movie`} state={movie.imdbID}>
         <img src={movie.Poster} alt="" />
       </Link>
     </div>
