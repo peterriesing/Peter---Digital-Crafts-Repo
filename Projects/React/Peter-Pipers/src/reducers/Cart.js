@@ -6,11 +6,13 @@ export const Cart = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, item) => {
-      state.push(item);
+    addToCart: (state, action) => {
+      console.log(state);
+      state.push(action.payload);
+      console.log(state);
     },
-    removeFromCart: (state, item) => {
-      state.filter(item);
+    removeFromCart: (state, action) => {
+      state.filter((item) => item.itemID !== action.payload.itemID);
     },
   },
 });

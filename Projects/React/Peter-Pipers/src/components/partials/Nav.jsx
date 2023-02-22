@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cart from "../../../public/cart.svg";
+import cart from "/cart.svg";
 
 const Nav = () => {
+  // cart use selector cart.length
+
   return (
     <div className="navbar">
       <div className="logo">
