@@ -2,6 +2,8 @@
 
 #### A Project in React, Redux, & CSS
 
+<a href="https://medium.com/@peter.riesing/peter-pipers-pickleball-palace-92d961f8732a">Medium Article</a>
+
 ---
 
 ### Overview
