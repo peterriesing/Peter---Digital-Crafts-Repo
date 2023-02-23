@@ -17,7 +17,7 @@ const Product = () => {
       <div className="productDetails">
         <h3>{item.brand}</h3>
         <h2>{item.product}</h2>
-        <h1>{item.price}</h1>
+        <h1>${item.price}</h1>
         <h4>Product #{item.itemID}</h4>
         <p>{item.description}</p>
         <div className="productAddDiv">

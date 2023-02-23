@@ -2,8 +2,13 @@ import React from "react";
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <h1>Peter Piper's</h1>
+      <div className="photoDiv">
+        <img src="/images/pball2.png" alt="pball2" />
+        <img src="/images/pball1.png" alt="pball1" />
+      </div>
+      <h2>Who we are</h2>
       <p>
         Welcome to our Peter Piper's! We are a team of passionate pickleball
         players who are dedicated to bringing you the most unique and strange
@@ -38,6 +43,7 @@ const About = () => {
         gear that's perfect for you. Thank you for choosing our store as your
         go-to destination for strange and unique pickleball gear!
       </p>
+      <h2>Thanks for visiting!</h2>
     </div>
   );
 };

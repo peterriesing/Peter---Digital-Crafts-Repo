@@ -15,7 +15,7 @@ const ItemCard = ({ item }) => {
         <img className="itemImage" src={item.img} alt="product image" />
       </div>
       <div className="itemBottom">
-        <h1 className="itemPrice">{item.price}</h1>
+        <h1 className="itemPrice">${item.price}</h1>
         <button
           onClick={() => dispatch(selectItem(item))}
           className="itemButton"

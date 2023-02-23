@@ -16,27 +16,23 @@ const Home = () => {
       }
     });
   };
-
   getFeatured(products);
-  console.log("featured");
-  console.log(featured);
-
-  // const location = useLocation();
 
   return (
-    <div className="featuredDiv">
-      <h1>Featured Products</h1>
-      <div className="featuredProducts">
-        {/* GET ALL ITEMS */}
-        {/* {products.map((item) => (
-          <ItemCard item={item} />
-        ))} */}
-        {/* GET FEATURED ITEMS */}
-        {featured.map((item) => (
-          <>
+    <div className="home">
+      <div className="homeTop">
+        <h1>Welcome to Peter Piper's Pickleball Palace!</h1>
+        <div className="homeSplash">
+          <img src="/splash.png" alt="splash" />
+        </div>
+      </div>
+      <div className="featuredDiv">
+        <h1>Featured Products</h1>
+        <div className="featuredProducts">
+          {featured.map((item) => (
             <ItemCard item={item} />
-          </>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cart from "/cart.svg";
+import carticon from "/cart.svg";
+import { useSelector } from "react-redux";
 
 const Nav = () => {
   // cart use selector cart.length
+
+  const cart = useSelector((state) => state.cart);
+  const cartTotal = cart.length;
 
   return (
     <div className="navbar">
@@ -21,10 +25,11 @@ const Nav = () => {
           About
         </Link>
       </div>
-      <div className="cart">
+      <div className="cartNav">
         <Link to="/cart">
-          <img className="cartimg" src={cart} alt="cart" />
+          <img className="cartImg" src={carticon} alt="cart" />
         </Link>
+        <div className="cartTotal">{cartTotal}</div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import Shop from "./components/Shop";
 import About from "./components/About";
 import Product from "./components/Product";
 import Footer from "./components/partials/Footer";
-import Cart from "./reducers/Cart";
+import Cart from "./components/Cart";
 import Error from "./components/Error";
 
 function App() {
